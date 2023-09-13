@@ -18,7 +18,7 @@ Projeto desenvolvido para o teste técnico da empresa Trakto.
 
 ### 1.1 Deploy da Aplicação
 
-- <a name="creative" href="https://trakto.vercel.app" target="_blank">Creative Educ - Live</a>
+- <a name="creative" href="https://creative-educ-angular.vercel.app/" target="_blank">Creative Educ - Live</a>
 
 <a name="links"></a>
 
