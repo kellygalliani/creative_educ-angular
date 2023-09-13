@@ -1,0 +1,52 @@
+<app-nav-menu [type]="'default'"></app-nav-menu>
+<main class="container main-documents">
+    <div class="banner">
+        <img src="../../../assets/banner.jpg" alt="banner" class="banner__image">
+    </div>
+    <div class="content">
+        <div class="content__header">
+            <div class="content__header-top">
+                <span class="content__header-date">Semana 06/02 até 28/02</span>
+                <img src="../../../assets/left-arrow.svg" alt="left-arrow" class="icon-period" (click)="scrollList(-1)">
+                <img src="../../../assets/right-arrow.svg" alt="right-arrow" class="icon-period" (click)="scrollList(1)">
+            </div>
+            <button class="content__button" routerLink='see-all'>Ver todo conteúdo</button>
+        </div>
+        <div class="content__header-bottom">
+            <h2 class="content__header-title">Material didático</h2>
+            <p class="content__header-description">Acesse suas últimas apresentações de aula.</p>
+        </div>
+        <app-list-card [showAll]="false" (listReady)="onListReady($event)"></app-list-card>
+    </div>
+
+    <div class="content">
+        <div class="content__header">
+            <div class="content__header-top">
+                <span class="content__header-date">Semana 06/02 até 28/02</span>
+                <img src="../../../assets/left-arrow.svg" alt="left-arrow" class="icon-period" >
+                <img src="../../../assets/right-arrow.svg" alt="right-arrow" class="icon-period" >
+            </div>
+            <a href="https://www.youtube.com/@Trakto" class="content__button-yt" target="_blank">
+                <img src="../../../assets/youtube-icon.png" alt="Ícone do Youtube">
+                Abrir no Youtube
+            </a>
+        </div>
+        <div class="content__header-bottom">
+            <h2 class="content__header-title">Vídeo aulas</h2>
+            <p class="content__header-description">Complemente os estudos assistindo o conteúdo de forma dinâmica</p>
+        </div>
+        <div class="content__wrapper">
+            <ul class="content__list" >
+                <iframe width="250" height="180" src="https://www.youtube.com/embed/BTok0FvxA7Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe width="250" height="180" src="https://www.youtube.com/embed/kPdWyVW0o8E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe width="250" height="180" src="https://www.youtube.com/embed/sobuKJ21c7k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe width="250" height="180" src="https://www.youtube.com/embed/Wwo6p5yBhj0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe width="250" height="180" src="https://www.youtube.com/embed/oRWfxt1Z_fA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe width="250" height="180" src="https://www.youtube.com/embed/MbEPCzDeQeY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </ul>
+            <div class="content__list-fade"></div>
+        </div>
+    </div>
+    
+</main>
+<router-outlet></router-outlet>

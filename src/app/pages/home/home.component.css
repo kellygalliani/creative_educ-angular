@@ -1,0 +1,73 @@
+ .background {
+    position: relative;
+    background-color: var(--color-background-app); 
+    background-color: #1D1B1B;
+    background-image: url('../../../assets/home-background.png');
+    background-size:cover;
+    width: 100%;
+    min-height: 100%;
+    z-index: -2;
+} 
+.main {
+    width: 90%;
+    min-height: 100vh;
+    padding-top: 200px;
+    padding-bottom: 32px;
+}
+.main__content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+    flex-wrap: wrap;
+}
+.main__content--group{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    width: 90%;
+    max-width: 280px;
+    cursor: pointer;
+    z-index: 10;
+}
+.main__content--title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.main__content--bigicon{
+    width: 80%;
+    height: 80%;
+}
+h2{
+    color: var(--color-neutral-white);
+    font-family: 'Poppins', sans-serif;
+    font-size: var(--text-size-5);
+    font-weight: var(700);
+}
+span{
+    width: 28px;
+    height: 4px;
+}
+.span--blue{
+    background-color:  #4173CD;
+}
+.span--green{
+    background-color:  var(--color-brand-Green);
+}
+.span--pink{
+    background-color:  #F6B5FF;
+}
+.span--red{
+    background-color:  #FF0000;
+}
+
+@media(max-width: 1005px){
+    .main__content{
+        justify-content: center;
+    }
+}
+

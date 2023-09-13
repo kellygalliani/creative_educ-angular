@@ -1,0 +1,40 @@
+<nav [class.dark-theme]="type === 'dark'">
+    <div class="container nav__content">
+      <img
+        [src]="type === 'dark' ? '../../../assets/logo-green-white.png' : '../../../assets/logo-green-dark.png'"
+        alt="Logo"
+        class="nav__logo"
+      >
+      <div class="nav__group">
+        <div class="nav__hamburger" (click)="toggleMenu()">
+          <span class="material-symbols-rounded">menu</span>        
+        </div>
+        <button *ngIf="type !== 'dark'" class="nav__button nav__menu-hidden" (click)="goToHome()">
+          <img src="../../../assets/icon-back.svg" alt="ícone de voltar" class="">
+            Trocar de ambiente
+        </button>
+        <div class="nav__left-content nav__menu-hidden">
+            <div class="nav__date">
+              <img [src]="type === 'dark' ? '../../../assets/icon-calendar-white.svg' : '../../../assets/icon-calendar.svg'" alt="ícone de calendário">
+              <p>{{ currentDate }}</p>
+            </div>
+            <span class="nav__separator">|</span>
+            <img [src]="type === 'dark' ? '../../../assets/icon-bell-white.svg' : '../../../assets/icon-bell.svg'" alt="ícone de notificações" class="nav__icon">
+            <span class="nav__separator">|</span>
+            <div class="nav__avatar" (click)="toggleMenu()">
+              <img [src]="setUser()" alt="Avatar do usuário" class="nav__avatar--img">
+              <img [src]="type === 'dark' ? '../../../assets/icon-down-white.svg' : '../../../assets/icon-down.svg'" alt="abrir menu" class="nav__icon--menu">
+            </div>
+        </div>
+        <div class="nav__menu-dropdown" [ngClass]="{ visible: isMenuVisible }">
+          <button *ngIf="type !== 'dark'" class="nav__button button-hidden" (click)="goToHome()">
+              Trocar de ambiente
+          </button>
+          <p class="nav__menu-dropdown--title">Sua Conta</p>
+          <a class="nav__menu-dropdown--links" href="">Perfil</a>
+          <a class="nav__menu-dropdown--links" href="">Suporte</a>
+          <button class="nav__menu-dropdown--button" (click)="logout()">Sair da conta</button>
+        </div>
+      </div>
+    </div>
+  </nav>

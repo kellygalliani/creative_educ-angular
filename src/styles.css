@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    list-style: none;
+    text-decoration: none;
+    font-family: var(--font-family);
+    z-index: 0;
+  }
+  
+  :root {
+
+    --color-background-app: #F5F5F5;
+    --color-background-nav: #252323;
+    
+    --color-brand-Trakto-app:#4743FF;
+    --color-brand-Trakto:    #0095FF;
+    --color-brand-Green:     #1DC763;
+    
+    --color-neutral-white:  #FFFFFF;
+    --color-neutral-light:  #E4EBFB;
+    --color-neutral-clear:  #D0DAEF;
+    --color-neutral-cloudy: #7183A6;
+    --color-neutral-dark:   #354564;
+    --color-neutral-darkest:#04183E;
+  
+    --text-size-1: 12px;
+    --text-size-2: 14px;
+    --text-size-3: 18px;
+    --text-size-4: 20px;
+    --text-size-5: 24px;
+    --text-size-6: 49px;
+
+    --font-family: "Roboto", sans-serif;
+    --font-family-alt: "Poppins", sans-serif;
+  
+    --radius-1: 4px;
+    --radius-2: 8px;
+  }
+  
+  img {
+    max-width: 100%;
+  }
+  
+  button {
+    cursor: pointer;
+  }
+  
+  body {
+    position: relative;
+    background-color: var(--color-background-app);
+  }
+  a{
+    text-decoration: none;
+  }
+  li{
+    cursor: pointer;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1784px;
+    margin: 0 auto;
+  }
+

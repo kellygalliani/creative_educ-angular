@@ -1,0 +1,59 @@
+<div class="whiteboard-container">
+    <div class="container_background-canvas" >
+      <div class="canvas-container" #canvasContainer>
+        <canvas
+          id="whiteboard-canvas"
+          #whiteboardCanvas
+          (mousedown)="handleMouseDown($event)"
+          (mouseup)="handleMouseUp()"
+          (mousemove)="handleMouseMove($event)"
+        ></canvas>
+      </div>
+    </div>
+    <div class="container_footer-canvas">
+        <div class="general__tools-container">
+          <div class="principal-tools">
+            <div class="pen-container">
+              <div class="pen-div" (click)="selectPen()">
+                <span class="material-symbols-rounded">pen_size_3</span>
+              </div>
+              <div class="pen__arrow-container" (click)="toggleOptions('pen')">
+                <span class="material-symbols-rounded">arrow_drop_up</span>
+              </div>
+              <div class="pen-options" [class.visible]="penOptionsVisible">
+                <div class="pen-size">
+                  <span class="size-label">Tamanho:</span>
+                  <input
+                    type="range"
+                    min="1"
+                    max="10"
+                    value="1"
+                    class="size-slider"
+                    (change)="handlePenSizeChange($event)"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="color-container" (click)="toggleOptions('color')">
+                <span class="material-symbols-rounded">palette</span>
+                <div class="color-options" [class.visible]="colorOptionsVisible">
+                    <div class="red-color" (click)="selectPenColor('#FF0000')"></div>
+                    <div class="green-color" (click)="selectPenColor('#00FF00')"></div>
+                    <div class="yellow-color" (click)="selectPenColor('#FFFF00')"></div>
+                    <div class="blue-color" (click)="selectPenColor('#0000FF')"></div>
+                    <div class="white-color" (click)="selectPenColor('#FFFFFF')"></div>
+                    <div class="black-color" (click)="selectPenColor('#000000')"></div>
+                  </div>
+            </div>
+            <div class="eraser-container" (click)="selectEraser()">
+              <img src="../../../assets/eraser.png" alt="borracha" class="eraser" />
+            </div>
+            </div>
+            <button class="clear-button" (click)="downloadImage()">Fazer Download</button>
+        </div>
+        <a class="nav__button button-hidden" href="">
+            Trocar de ambiente
+        </a>
+
+    </div>
+</div>

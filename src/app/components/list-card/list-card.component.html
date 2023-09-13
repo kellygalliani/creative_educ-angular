@@ -1,0 +1,13 @@
+<div class="content__wrapper">
+  <ul #list class="content__list" [class.content__list--wrap]="showAll">
+      <li *ngFor="let project of projects" class="content__list-item" (click)="openProject(project.id)">
+        <div class="content__list-divImg">
+          <img [src]="project.thumbs.raw" alt="project image" class="content__list-image">
+        </div>
+        <p *ngIf="project.pages && project.pages.length > 1" class="content__list-pages">{{ project.pages.length }} Slides</p>
+        <p class="content__list-text">{{ project.title }}</p>
+      </li>
+  </ul>
+  <div *ngIf="!showAll" class="content__list-fade"></div>
+  <p *ngIf="projects.length === 0" class="content__no-projects">Você ainda não possui projetos</p>
+</div>

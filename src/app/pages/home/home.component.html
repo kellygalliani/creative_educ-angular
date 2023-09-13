@@ -1,0 +1,38 @@
+
+<app-nav-menu [type]="'dark'"></app-nav-menu>
+<div class="background">
+    <main class="container main">
+        <ul class="main__content">
+            <li class="main__content--group" (click)="navigateTo('/documents')">
+                <div class="main__content--title">
+                  <h2>Material didático</h2>
+                  <span class="span--blue"></span>
+                </div>
+                <img src="../../../assets/documents_icon.png" alt="icon material didático" class="main__content--bigicon">
+            </li>              
+            <li  class="main__content--group" (click)="navigateTo('')">
+                <div class="main__content--title">
+                    <h2>Quiz</h2>
+                    <span class="span--green"></span>
+                </div>
+                <img src="../../../assets/quiz_icon.png" alt="icon quiz" class="main__content--bigicon" >
+            </li>
+            <li  class="main__content--group" (click)="navigateTo('/whiteboard')">
+                <div class="main__content--title">
+                    <h2>Desenho</h2>
+                    <span class="span--pink"></span>
+                </div>
+                <img src="../../../assets/drawn_icon.png" alt="icon desenho" class="main__content--bigicon">
+            </li>
+            <li  class="main__content--group" (click)="navigateTo('')">
+                <div class="main__content--title">
+                    <h2>Youtube</h2>
+                    <span class="span--red"></span>
+                </div>
+                <img src="../../../assets/youtube_icon.png" alt="icon youtube" class="main__content--bigicon">
+            </li>
+        </ul>
+    </main>
+</div>
+<router-outlet></router-outlet>
+
